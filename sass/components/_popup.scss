@@ -55,6 +55,12 @@
   &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include respond(tab-land) {
+      width: 100%;
+      display: block;
+      padding: 0;
+    }
   }
 
   &__right {
@@ -62,11 +68,25 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(tab-land) {
+      width: 100%;
+      display: block;
+      vertical-align: middle;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+
+    @include respond(tab-land) {
+      width: 49.8%;
+      padding: 0;
+      margin: 0;
+      height: 30rem;
+      display: inline-block;
+    }
   }
 
   &__text {
@@ -85,5 +105,10 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+
+    @include respond(tab-port) {
+      -moz-column-count: 1;
+      column-count: 1;
+    }
   }
 }
